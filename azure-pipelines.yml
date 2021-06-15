@@ -29,8 +29,7 @@ steps:
 
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
-    versionSelector: specificVersion
-    testPlatformVersion: 15.9.2
+    versionSelector: latestStable
 
 - task: VSTest@2
   inputs:
