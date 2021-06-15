@@ -32,6 +32,15 @@ steps:
     packageFeedSelector: 'nugetOrg'
     versionSelector: latestPreRelease
 
+- task: VSTest@1
+  displayName: 'Test Assemblies'
+  inputs:
+    testAssembly: '**\$(BuildConfiguration)\*test*.dll;-:**\obj\**'
+    codeCoverageEnabled: true
+    vsTestVersion: latest
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
