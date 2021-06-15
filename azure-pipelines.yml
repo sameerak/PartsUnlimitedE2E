@@ -39,6 +39,7 @@ steps:
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
+    vstestLocation: 'C:\azp\agent\_work\_tool\VsTest'
 
 - task: VSTest@1
   inputs:
