@@ -32,19 +32,19 @@ steps:
     packageFeedSelector: 'nugetOrg'
     versionSelector: latestPreRelease
 
-- task: VSTest@1
-  inputs:
-    testAssembly: '**\$(BuildConfiguration)\*test*.dll;-:**\obj\**'
-    codeCoverageEnabled: true
-    vsTestVersion: latest
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-
 - task: VSTest@2
   inputs:
     vsTestVersion: 15.0
     runInParallel: false
     codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
+- task: VSTest@1
+  inputs:
+    testAssembly: '**\$(BuildConfiguration)\*test*.dll;-:**\obj\**'
+    codeCoverageEnabled: true
+    vsTestVersion: latest
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
