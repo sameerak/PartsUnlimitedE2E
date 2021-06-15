@@ -30,11 +30,11 @@ steps:
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
-    versionSelector: 15.0
+    versionSelector: 15.9.2
 
 - task: VSTest@2
   inputs:
-    vsTestVersion: 15.0
+    vsTestVersion: 15.9.2
     runInParallel: false
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
