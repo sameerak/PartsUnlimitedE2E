@@ -35,7 +35,7 @@ steps:
 
 - task: VSTest@2
   inputs:
-    vsTestVersion: 15.0
+    vsTestVersion: 15.9
     runInParallel: false
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
