@@ -35,7 +35,7 @@ steps:
 
 - task: VSTest@2
   inputs:
-    vsTestVersion: 'Installed by tools installer'
+    vsTestVersion: toolsInstaller
     runInParallel: false
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
