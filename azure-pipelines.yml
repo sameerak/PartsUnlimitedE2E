@@ -35,4 +35,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    searchFolder: 'C:\azp\agent\_work'
+    searchFolder: 'C:\azp\agent\_work\_tool\VsTest'
