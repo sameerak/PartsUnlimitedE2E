@@ -30,7 +30,8 @@ steps:
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
     packageFeedSelector: 'nugetOrg'
-    versionSelector: 15.9.2
+    versionSelector: specificVersion
+    testPlatformVersion: 15.9.2
 
 - task: VSTest@2
   inputs:
