@@ -27,7 +27,10 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: VisualStudioTestPlatformInstaller@1
+
 - task: VSTest@2
   inputs:
+    vsTestVersion: toolsInstaller
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
