@@ -36,4 +36,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    vstestLocation: 'C:\azp\agent\_work\_tool\VsTest\16.10.0\x64'
+    vstestLocation: 'C:\azp\agent\_work\_tool\VsTest'
