@@ -29,7 +29,7 @@ steps:
 
 - task: VisualStudioTestPlatformInstaller@1
   inputs:
-    versionSelector: latestStable
+    versionSelector: latestPreRelease
 
 - task: VSTest@2
   inputs:
