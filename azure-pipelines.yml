@@ -36,22 +36,5 @@ steps:
 - task: VSTest@2
   inputs:
     vsTestVersion: toolsInstaller
-    runInParallel: false
-    codeCoverageEnabled: true
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-    vstestLocation: 'C:\azp\agent\_work\_tool\VsTest'
-
-- task: VSTest@1
-  inputs:
-    testAssembly: '**\$(BuildConfiguration)\*test*.dll;-:**\obj\**'
-    codeCoverageEnabled: true
-    vsTestVersion: latest
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
-
-- task: VSTest@2
-  inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    vstestLocation: 'C:\azp\agent\_work\_tool\VsTest'
