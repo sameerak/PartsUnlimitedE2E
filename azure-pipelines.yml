@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: 'localhostpool'
+pool: 'Docker agent pool'
 
 variables:
   solution: '**/*.sln'
