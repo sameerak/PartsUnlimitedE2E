@@ -9,4 +9,4 @@ Powershell file start.ps1 can be found in [2] and [3].
 
 [1] https://docs.microsoft.com/en-us/visualstudio/install/build-tools-container?view=vs-2019
 [2] https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
-[2] https://github.com/PacktPublishing/Learning-Azure-DevOps---B16392/blob/master/Chapter-6/start.ps1
+[3] https://github.com/PacktPublishing/Learning-Azure-DevOps---B16392/blob/master/Chapter-6/start.ps1
