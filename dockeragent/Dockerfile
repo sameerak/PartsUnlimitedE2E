@@ -18,9 +18,6 @@ RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
     --remove Microsoft.VisualStudio.Component.Windows81SDK `
  || IF "%ERRORLEVEL%"=="3010" EXIT 0
- # Define the entry point for the docker container.
-# This entry point starts the developer command prompt and launches the PowerShell shell.
-ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 WORKDIR /azp
 COPY start.ps1 .
 CMD powershell .\start.ps1
