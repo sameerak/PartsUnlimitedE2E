@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-docker-agent
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app: agent-server
+  template:
+    metadata:
+      labels:
+        app: agent-server
+    spec:
+      containers:
+      - name: azure-docker-agent-container
+        image: <acrName>.azurecr.io/dockeragent:v1
+        env:
+        - name: AZP_URL
+          value: "<URL to the DevOps organization>"
+        - name: AZP_TOKEN
+          value: "<PAT>"
+        - name: AZP_POOL
+          value: "<Agent pool name>"
+        - name: AZP_AGENT_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
